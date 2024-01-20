@@ -50,7 +50,7 @@ public class AtletaController {
         return ResponseEntity.ok(atletaModel);
     }
 
-    @GetMapping("{nome}")
+    @GetMapping("/nome/{nome}")
     public ResponseEntity<List<AtletaModel>> listarPorNome(@PathVariable String nome) {
         List<AtletaModel> atletaModel = service.listarPorNome(nome);
         return ResponseEntity.ok(atletaModel);
